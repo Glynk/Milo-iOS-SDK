@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
 s.name         = "MiloSdk"
-s.version      = "2.0"
+s.version      = "3.0"
 s.summary      = "Milo SDK"
 s.description  = <<-DESC
 For Milo SDK implementation steps, check README.md.
