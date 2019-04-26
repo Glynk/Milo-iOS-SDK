@@ -13,7 +13,6 @@ Welcome to Milo SDK's Wiki! Here you can find information about how to integrate
 
 ```
 pod 'MiloSdk'
-
 ```
 
 ## Info.Plist file chnages
@@ -21,8 +20,6 @@ pod 'MiloSdk'
 1. Right click on Info.plist, click "Open As" -> "Source Code". Add the below strings
 
 ```
-#!xml
-
 <key>NSCameraUsageDescription</key>
 <string>Allow app to access this device&apos;s camera to upload profile picture &amp; create posts.</string>
 <key>NSPhotoLibraryUsageDescription</key>
@@ -38,8 +35,6 @@ or If you already has these strings, please ignore it
 1. In `AppDelegate.swift`
 
 ```
-#!swift
-
 import MiloSdk
 
 ```
@@ -48,8 +43,6 @@ import MiloSdk
 
 
 ```
-#!swift
-
 MiloSDK.shared.initializeAuthAPI(phoneNumber: "3333333333", firtName: "Amar", lastName: "N", profilePicture: "", clientSecret: clientSecret)
 
 ```
@@ -71,19 +64,24 @@ _Please note that all the above fields are mandatory except for **lastName** and
 
 ## Hooking the Milo SDK icon on the Nestaway app
 
-On the Controller where you will open Milo,  
+On the Controller where you will open Milo, Always set `Milo MainVc` in  `NavigationController` and use present. Don't use push.
 
 ```
-#!swift
+import MiloSdk
 
-if let vc = MiloSDK.shared.getMainVC() {
-    let navVC = UINavigationController.init(rootViewController: vc)
-    self.present(navVC, animated: true, completion: nil)
-}
+...
+...
+...
+
+
+  @IBAction func btnMiloSdkOnClick(_ sender: UIButton) {
+        if let vc = MiloSDK.shared.getMainVC() {
+            let navVC = UINavigationController.init(rootViewController: vc)
+            self.present(navVC, animated: true, completion: nil)
+        }
+  }
 
 ```
-
-Always set `Milo MainVc` in  `NavigationController` and use present. Don't use push.
 
 In case you have any issues please contact sdkissues@glynk.com. 
 
