@@ -17,7 +17,7 @@ pod 'MiloSdk'
 
 ## Info.Plist file chnages
 
-1. Right click on Info.plist, click "Open As" -> "Source Code". Add the below strings
+1. Right click on Info.plist and click "Open As" -> "Source Code". Add the below strings (ignore if you already have these) - 
 
 ```
 <key>NSCameraUsageDescription</key>
@@ -26,8 +26,6 @@ pod 'MiloSdk'
 <string>Allow app to access this device&apos;s photo library to upload profile picture &amp; create posts.</string>
 
 ```
-
-or If you already has these strings, please ignore it
 
 ## Initializing the SDK
 
@@ -64,7 +62,7 @@ _Please note that all the above fields are mandatory except for **lastName** and
 
 ## Hooking the Milo SDK icon on the Nestaway app
 
-On the Controller where you will open Milo, Always set `Milo MainVc` in  `NavigationController` and use present. Don't use push.
+On the controller where you'd like to open the Milo screen
 
 ```
 import MiloSdk
@@ -73,10 +71,10 @@ import MiloSdk
 ...
 ...
 
-
   @IBAction func btnMiloSdkOnClick(_ sender: UIButton) {
         if let vc = MiloSDK.shared.getMainVC() {
             let navVC = UINavigationController.init(rootViewController: vc)
+            //Always set `Milo MainVc` in  `NavigationController` and use 'present' method, do not use 'push' method, because 'back' action is handled only for 'present'.
             self.present(navVC, animated: true, completion: nil)
         }
   }
