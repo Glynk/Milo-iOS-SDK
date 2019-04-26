@@ -1,0 +1,11 @@
+framework module MiloSdk {
+  umbrella header "MiloSdk.h"
+
+  export *
+  module * { export * }
+}
+
+module MiloSdk.Swift {
+    header "MiloSdk-Swift.h"
+    requires objc
+}
