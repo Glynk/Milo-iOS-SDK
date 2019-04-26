@@ -41,7 +41,7 @@ import MiloSdk
 
 
 ```
-MiloSDK.shared.initializeAuthAPI(phoneNumber: "3333333333", firtName: "Amar", lastName: "N", profilePicture: "", clientSecret: clientSecret)
+MiloSDK.shared.initializeAuthAPI(phoneNumber: "3333333333", firstName: "Jaleel", lastName: "Nazir", houseId: "", gender: "", clientSecret: self.clientSecret)
 
 ```
 
