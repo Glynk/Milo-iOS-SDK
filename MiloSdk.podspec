@@ -1,18 +1,18 @@
 Pod::Spec.new do |s|
 
 s.name         = "MiloSdk"
-s.version      = "1.0"
+s.version      = "2.0"
 s.summary      = "Milo SDK"
 s.description  = <<-DESC
-For Milo SDK implementation steps, check Readme file.
+For Milo SDK implementation steps, check README.md.
 DESC
 
-s.homepage     = "https://bitbucket.org/Glynk/milo-ios-pod"
+s.homepage     = "https://github.com/Glynk/Milo-iOS-SDK.git"
 
 s.license      = "MIT"
 s.author             = { "Jaleel Nazir" => "jaleel@glynk.com" }
 s.platform     = :ios, "11.0"
-s.source       = { :git => "https://bitbucket.org/Glynk/milo-ios-pod.git", :tag => "#{s.version}" }
+s.source       = { :git => "https://github.com/Glynk/Milo-iOS-SDK.git", :tag => "#{s.version}" }
 
 s.source_files  = "MiloSdk/*.{h}"
 s.ios.framework  = 'UIKit'
