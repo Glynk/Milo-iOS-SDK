@@ -308,6 +308,14 @@ SWIFT_CLASS("_TtC7MiloSdk23GlynkRootViewController")
 
 
 
+SWIFT_CLASS("_TtC7MiloSdk10MiloButton")
+@interface MiloButton : UIButton
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (void)awakeFromNib;
+@end
+
+
 
 
 
