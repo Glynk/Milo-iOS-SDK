@@ -4,7 +4,7 @@
 Welcome to Milo SDK's Wiki! Here you can find information about how to integrate Milo SDK with your app. 
 
 ## Version Information
-* 2.0
+* 4.0
 
 ## Requirements
 * iOS 11.0+
@@ -41,7 +41,22 @@ import MiloSdk
 
 
 ```
-MiloSDK.shared.initializeAuthAPI(phoneNumber: "3333333333", firstName: "Jaleel", lastName: "Nazir", houseId: "", gender: "", clientSecret: self.clientSecret)
+
+let miloClientSecret = ""
+
+
+func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    ...
+    ...
+    
+    MiloSDK.shared.initializeAuthAPI(phoneNumber: "3333333333", firstName: "Jaleel", lastName: "Nazir", houseId: "", gender: "", clientSecret: miloClientSecret)
+    
+    ...
+    ...
+    
+    return true
+}
+
 
 ```
 
@@ -65,19 +80,41 @@ _Please note that all the above fields are mandatory except for **lastName** and
 On the controller where you'd like to open the Milo screen
 
 ```
+import UIKit
 import MiloSdk
 
-...
-...
-...
+class ViewController: UIViewController {
 
-  @IBAction func btnMiloSdkOnClick(_ sender: UIButton) {
+    @IBOutlet weak var vWForMiloBtn: UIView!
+
+    var btnMilo: MiloButton!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        ...
+        ...
+        
+        btnMilo = MiloButton.init(frame: CGRect.init(x: 0, y: 0, width: 120, height: 120))
+        btnMilo.addTarget(self, action: #selector(btnMiloSdkOnClick), for: UIControl.Event.touchUpInside)
+        vWForMiloBtn.addSubview(btnMilo)
+        
+        ...
+        ...
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        btnMilo.frame = CGRect.init(x: 0, y: 0, width: 120, height: 120)
+    }
+
+    @objc func btnMiloSdkOnClick() {
         if let vc = MiloSDK.shared.getMainVC() {
             let navVC = UINavigationController.init(rootViewController: vc)
-            //Always set `Milo MainVc` in  `NavigationController` and use 'present' method, do not use 'push' method, because 'back' action is handled only for 'present'.
-            self.present(navVC, animated: true, completion: nil)
+            // Always set `Milo MainVc` in  `NavigationController` and use 'present' method, do not use 'push' method, because 'back' action is handled only for 'present'.
+            present(navVC, animated: true, completion: nil)
         }
-  }
+    }
+}
 
 ```
 
