@@ -276,15 +276,6 @@ SWIFT_CLASS("_TtC7MiloSdk13FTImageViewer")
 
 
 
-SWIFT_CLASS("_TtC7MiloSdk17GlynkProgressView")
-@interface GlynkProgressView : UIView
-/// Initialize programmaticaly just like you would any other UIButton.
-- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-- (void)layoutSubviews;
-@end
-
-
 SWIFT_CLASS("_TtC7MiloSdk19GlynkViewController")
 @interface GlynkViewController : UIViewController
 - (void)viewDidAppear:(BOOL)animated;
@@ -423,8 +414,6 @@ SWIFT_PROTOCOL("_TtP7MiloSdk26RSKGrowingTextViewDelegate_")
 
 
 
-
-
 @interface UILabel (SWIFT_EXTENSION(MiloSdk))
 /// The name of a style in the global <code>NamedStyles</code> registry.
 @property (nonatomic, copy) NSString * _Nullable styleName;
@@ -463,8 +452,6 @@ SWIFT_PROTOCOL("_TtP7MiloSdk26RSKGrowingTextViewDelegate_")
 /// The name of a style in the global <code>NamedStyles</code> registry.
 @property (nonatomic, copy) NSString * _Nullable styleName;
 @end
-
-
 
 
 

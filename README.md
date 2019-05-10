@@ -25,6 +25,12 @@ pod 'MiloSdk'
 <key>NSPhotoLibraryUsageDescription</key>
 <string>Allow app to access this device&apos;s photo library to upload profile picture &amp; create posts.</string>
 
+
+<key>LSApplicationQueriesSchemes</key>
+<array>
+    <string>miloapp</string>
+</array>
+
 ```
 
 ## Initializing the SDK
