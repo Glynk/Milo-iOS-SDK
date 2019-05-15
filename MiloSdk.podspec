@@ -31,7 +31,6 @@ s.dependency 'Kingfisher', '5.1.1'
 s.dependency 'lottie-ios', '3.0.4'
 s.dependency 'ObjectMapper', '3.4.2'
 s.dependency 'Socket.IO-Client-Swift', '14.0.0'
-s.dependency 'Atributika', '4.8.2'
 
 s.xcconfig = { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/MiloSdk"' }
 s.requires_arc = true
