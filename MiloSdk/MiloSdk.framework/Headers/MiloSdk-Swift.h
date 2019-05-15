@@ -230,6 +230,16 @@ SWIFT_CLASS("_TtC7MiloSdk11ActiveLabel")
 @end
 
 
+SWIFT_CLASS("_TtC7MiloSdk15AttributedLabel")
+@interface AttributedLabel : UIView
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (void)layoutSubviews;
+- (CGSize)sizeThatFits:(CGSize)size SWIFT_WARN_UNUSED_RESULT;
+@property (nonatomic, readonly) CGSize intrinsicContentSize;
+@end
+
+
 
 
 SWIFT_CLASS("_TtC7MiloSdk14DottedLineView")
@@ -314,6 +324,8 @@ SWIFT_CLASS("_TtC7MiloSdk10MiloButton")
 
 
 
+
+
 @class NSTextContainer;
 @class UITextPosition;
 
@@ -384,6 +396,8 @@ SWIFT_PROTOCOL("_TtP7MiloSdk26RSKGrowingTextViewDelegate_")
 @interface SFSafariViewController (SWIFT_EXTENSION(MiloSdk))
 @property (nonatomic, readonly) UIStatusBarStyle preferredStatusBarStyle;
 @end
+
+
 
 
 
