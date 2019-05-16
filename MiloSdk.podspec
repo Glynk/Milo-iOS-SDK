@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
 s.name         = "MiloSdk"
-s.version      = "6.0"
+s.version      = "7.0"
 s.summary      = "Milo SDK"
 s.description  = <<-DESC
 For Milo SDK implementation steps, check README.md.
@@ -18,7 +18,6 @@ s.source_files  = "MiloSdk/*.{h}"
 s.ios.framework  = 'UIKit'
 s.ios.vendored_frameworks = 'MiloSdk/MiloSdk.framework'
 
-
 s.static_framework = true
 
 s.dependency 'Alamofire', '4.8.1'
@@ -31,6 +30,7 @@ s.dependency 'Kingfisher', '5.1.1'
 s.dependency 'lottie-ios', '3.0.4'
 s.dependency 'ObjectMapper', '3.4.2'
 s.dependency 'Socket.IO-Client-Swift', '14.0.0'
+s.dependency 'PanModal' '1.2.2'
 
 s.xcconfig = { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/MiloSdk"' }
 s.requires_arc = true
