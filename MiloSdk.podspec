@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
 s.name         = "MiloSdk"
-s.version      = "7.0"
+s.version      = "8.0"
 s.summary      = "Milo SDK"
 s.description  = <<-DESC
 For Milo SDK implementation steps, check README.md.
@@ -26,7 +26,7 @@ s.dependency 'Crashlytics', '3.12.0'
 s.dependency 'Fabric', '1.9.0'
 s.dependency 'Google/Analytics', '2.0.4'
 s.dependency 'IQKeyboardManagerSwift', '6.2.0'
-s.dependency 'Kingfisher', '5.1.1'
+s.dependency 'Kingfisher', '5.5.0'
 s.dependency 'lottie-ios', '3.0.4'
 s.dependency 'ObjectMapper', '3.4.2'
 s.dependency 'Socket.IO-Client-Swift', '14.0.0'
