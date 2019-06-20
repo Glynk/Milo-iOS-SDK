@@ -13,6 +13,7 @@ s.license      = "MIT"
 s.author             = { "Jaleel Nazir" => "jaleel@glynk.com" }
 s.platform     = :ios, "11.0"
 s.source       = { :git => "https://github.com/Glynk/Milo-iOS-SDK.git", :tag => "#{s.version}" }
+s.swift_version = '4.0'
 
 s.source_files  = "MiloSdk/*.{h}"
 s.ios.framework  = 'UIKit'
