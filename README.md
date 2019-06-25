@@ -17,7 +17,7 @@ pod 'MiloSdk'
 
 ## Info.Plist file chnages
 
-1. Right click on Info.plist and click "Open As" -> "Source Code". Add the below strings (ignore if you already have these) - 
+Right click on Info.plist and click "Open As" -> "Source Code". Add the below strings (ignore if you already have these) - 
 
 ```
 <key>NSCameraUsageDescription</key>
@@ -36,7 +36,7 @@ pod 'MiloSdk'
 ## Initializing the SDK
 
 
-1. In `AppDelegate.swift`
+In `AppDelegate.swift`
 
 ```
 import MiloSdk
