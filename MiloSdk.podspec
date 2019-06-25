@@ -22,7 +22,7 @@ s.static_framework = true
 
 s.dependency 'Alamofire', '4.8.2'
 s.dependency 'Amplitude-iOS', '4.6.0'
-s.dependency 'Google/Analytics', '3.10'
+s.dependency 'Google/Analytics', '3.17.0'
 s.dependency 'IQKeyboardManagerSwift', '6.4.0'
 s.dependency 'Kingfisher', '5.6.0'
 s.dependency 'lottie-ios', '3.1.0'
