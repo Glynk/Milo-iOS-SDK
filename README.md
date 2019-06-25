@@ -22,11 +22,11 @@ pod 'MiloSdk'
 ```
 
 
-### 1. Info.Plist file chnages
+### 1. Info.plist file chnages
 
 Right click on Info.plist and click "Open As" -> "Source Code". Add the below strings (ignore if you already have these) - 
 
-```
+```html
 <key>NSCameraUsageDescription</key>
 <string>Allow app to access this device&apos;s camera to upload profile picture &amp; create posts.</string>
 <key>NSPhotoLibraryUsageDescription</key>
@@ -80,7 +80,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 **gender** - Optional field. Either 'male' or 'female' can be passed to identify the users' gender.
 **dateOfBirth** - Optional field. This is a string field with the date format dd-mm-yyyy
 
-### 3. Hooking the Milo SDK with icon on the Your app
+### 3. Hooking the Milo SDK with icon on the your app
 
 On the controller where you'd like to open the Milo screen
 
