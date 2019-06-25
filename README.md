@@ -73,11 +73,17 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 ```
 
 **clientSecret** - Mandatory field. Please request the client secret from ping@glynk.com
+
 **phoneNumber** - Mandatory field. Ten digit string field without country code or '+'. For example - 8123437303
+
 **firstName** - Mandatory field. String field which accepts users' first name.
+
 **lastName** - Optional field. String fields which accept users' last name.
+
 **houseId** - Optional field, except for Nestaway. house identifier code. This is a string field.
+
 **gender** - Optional field. Either 'male' or 'female' can be passed to identify the users' gender.
+
 **dateOfBirth** - Optional field. This is a string field with the date format dd-mm-yyyy
 
 ### 3. Hooking the Milo SDK with icon on the your app
