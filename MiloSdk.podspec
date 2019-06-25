@@ -21,13 +21,16 @@ s.ios.vendored_frameworks = 'MiloSdk/MiloSdk.framework'
 s.static_framework = true
 
 s.dependency 'Alamofire', '4.8.2'
-s.dependency 'Amplitude-iOS', '4.6.0'
-s.dependency 'Google/Analytics', '3.17.0'
-s.dependency 'IQKeyboardManagerSwift', '6.4.0'
-s.dependency 'Kingfisher', '5.6.0'
-s.dependency 'lottie-ios', '3.1.0'
 s.dependency 'ObjectMapper', '3.5.0'
+s.dependency 'Kingfisher', '5.6.0'
+
+s.dependency 'IQKeyboardManagerSwift', '6.4.0'
+
+s.dependency 'Google/Analytics'
+s.dependency 'Amplitude-iOS', '4.6.0'
+
 s.dependency 'Socket.IO-Client-Swift', '15.1.0'
+s.dependency 'lottie-ios', '3.1.0'
 
 s.xcconfig = { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/MiloSdk"' }
 s.requires_arc = true
