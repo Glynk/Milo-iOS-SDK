@@ -55,7 +55,16 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
     ...
     ...
     
-    MiloSDK.shared.initializeAuthAPI(phoneNumber: "3333333333", firstName: "Jaleel", lastName: "Nazir", houseId: "", gender: "", clientSecret: miloClientSecret)
+    MiloSDK.shared.setClientSecret(clientSecret)
+    MiloSDK.shared.setPhoneNumber("9886156126")
+    MiloSDK.shared.setFirstName("Jaleel")
+
+    MiloSDK.shared.setLastName("Nazir")
+    MiloSDK.shared.setHouseID("12324")
+    MiloSDK.shared.setGender("male")
+    MiloSDK.shared.setDateOfBirth("10-07-1992")
+
+    MiloSDK.shared.initializeMiloSDK()    
     
     ...
     ...
@@ -66,19 +75,19 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 
 ```
 
-**clientSecret** - please request the client secret from ping@glynk.com
+**clientSecret** - Mandatory field. Please request the client secret from ping@glynk.com
 
-**phoneNumber** - ten digit string field without country code or '+'. For example - 8123437303
+**phoneNumber** - Mandatory field. Ten digit string field without country code or '+'. For example - 8123437303
 
-**firstName** and **lastName** - string fields which accept users' first name and last name respectively. You can choose to not send the last name.
+**firstName** - Mandatory field. String field which accepts users' first name.
 
-**houseId** - Nestaway's house identifier code. This is a string field.  
+**lastName** - Optional field. String fields which accept users' last name.
 
-**gender** - either 'male' or 'female' can be passed to identify the users' gender. 
+**houseId** - Optional field, except for Nestaway. house identifier code. This is a string field.
 
-**dateOfBirth** - is a string field with the date format dd-mm-yyyy
+**gender** - Optional field. Either 'male' or 'female' can be passed to identify the users' gender.
 
-_Please note that all the above fields are mandatory except for **lastName** and **houseId** (this is a mandatory field for Nestaway.)_
+**dateOfBirth** - Optional field. This is a string field with the date format dd-mm-yyyy
 
 
 ## Hooking the Milo SDK icon on the Nestaway app
