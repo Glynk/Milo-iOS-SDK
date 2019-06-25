@@ -13,6 +13,7 @@ s.license      = "MIT"
 s.author             = { "Jaleel Nazir" => "jaleel@glynk.com" }
 s.platform     = :ios, "11.0"
 s.source       = { :git => "https://github.com/Glynk/Milo-iOS-SDK.git", :tag => "#{s.version}" }
+s.swift_version = '5.0'
 
 s.source_files  = "MiloSdk/*.{h}"
 s.ios.framework  = 'UIKit'
@@ -26,7 +27,7 @@ s.dependency 'Kingfisher', '5.6.0'
 
 s.dependency 'IQKeyboardManagerSwift', '6.4.0'
 
-s.dependency 'Google/Analytics'
+s.dependency 'Google/Analytics', '3.1.0'
 s.dependency 'Amplitude-iOS', '4.6.0'
 
 s.dependency 'Socket.IO-Client-Swift', '15.1.0'
