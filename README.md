@@ -4,7 +4,7 @@
 Welcome to Milo SDK's Wiki! Here you can find information about how to integrate Milo SDK with your app. 
 
 ## Version Information
-* 6.0
+* 8.0
 
 ## Requirements
 * iOS 11.0+
