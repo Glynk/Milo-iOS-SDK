@@ -1,5 +1,10 @@
-# Welcome - Milo-iOS-SDK
-Here you can find information about how to integrate Milo SDK with your app. 
+![1--3- (1).png](https://bitbucket.org/repo/EgxAzaa/images/163077752-1--3-%20%281%29.png)
+
+Welcome to Milo SDK's Wiki!
+
+Here you can find information about how to integrate Milo SDK with your app.
+
+### Current stable version - **8.0** ![ezgif-5-eb5c5ee059be.gif](https://bitbucket.org/repo/EgxAzaa/images/2979352723-ezgif-5-eb5c5ee059be.gif)
 
 ## Requirements
 
@@ -9,7 +14,7 @@ Here you can find information about how to integrate Milo SDK with your app.
 
 ## Communication
 
-- In case you have any issues please contact [sdkissues@glynk.com](sdkissues@glynk.com)
+- In case you have any issues please contact [sdk@getmilo.app](sdk@getmilo.app)
 
 ## Installation
 
@@ -21,8 +26,10 @@ Here you can find information about how to integrate Milo SDK with your app.
 pod 'MiloSdk'
 ```
 
+## Initialization 
 
-### 1. Info.plist file chnages
+
+### Info.plist file chnages
 
 Right click on Info.plist and click "Open As" -> "Source Code". Add the below strings (ignore if you already have these) - 
 
@@ -40,7 +47,7 @@ Right click on Info.plist and click "Open As" -> "Source Code". Add the below st
 
 ```
 
-### 2. Passing parameters and authenticating the user
+## Passing parameters and authenticating user
 
 
 Open `AppDelegate.swift`
@@ -57,13 +64,12 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
     ...
     
     MiloSDK.shared.setClientSecret(clientSecret)
-    MiloSDK.shared.setPhoneNumber("1234567890")
-    MiloSDK.shared.setFirstName("Jaleel")
-
-    MiloSDK.shared.setLastName("Nazir")
-    MiloSDK.shared.setHouseID("12324")
+    MiloSDK.shared.setPhoneNumber("9887156125")
+    MiloSDK.shared.setEmail("luke@tatooine.com")
+    MiloSDK.shared.setFirstName("Luke")
+    MiloSDK.shared.setLastName("Skywalker")
     MiloSDK.shared.setGender("male")
-    MiloSDK.shared.setDateOfBirth("10-07-1992")
+    MiloSDK.shared.setDateOfBirth("10-07-1972")
 
     MiloSDK.shared.initializeMiloSDK()
     ...
@@ -72,21 +78,20 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 }
 ```
 
-**clientSecret** - Mandatory field. Please request the client secret from ping@glynk.com
+**clientSecret** - _Mandatory field_. Request the client secret from sdk@getmilo.app or use you the SDK dashboard to create client secrets.
+**phoneNumber** - _Either phone number or email is mandatory_. Pass a string field, can contain country code.
 
-**phoneNumber** - Mandatory field. Ten digit string field without country code or '+'. For example - 8123437303
+**email** - _Either email or phone number is mandatory_. Pass a valid email address in string format.
 
-**firstName** - Mandatory field. String field which accepts users' first name.
+**firstName** - _Mandatory field_. String field which accepts users' first name.
 
-**lastName** - Optional field. String fields which accept users' last name.
+**lastName** - _Optional field_. String fields which accept users' last name.
 
-**houseId** - Optional field, except for Nestaway. house identifier code. This is a string field.
+**gender** - _Optional field_. Either 'male' or 'female' can be passed to identify the users' gender.
 
-**gender** - Optional field. Either 'male' or 'female' can be passed to identify the users' gender.
+**dateOfBirth** - _Optional field_. This is a string field with the date format dd-mm-yyyy
 
-**dateOfBirth** - Optional field. This is a string field with the date format dd-mm-yyyy
-
-### 3. Hooking the Milo SDK with icon on the your app
+## Launching the SDK
 
 On the controller where you'd like to open the Milo screen
 
@@ -127,6 +132,7 @@ class ViewController: UIViewController {
 
 ### Security Disclosure
 
-If you believe you have identified a security vulnerability with MiloSdk, you should report it as soon as possible via email to sdkissues@glynk.com. Please do not post it to a public issue tracker.
+If you believe you have identified a security vulnerability with MiloSdk, you should report it as soon as possible via email to sdk@getmilo.app.
 
-Thank you!
+## Notes
+Please use only the methods and UI components documented in this Wiki, do not use any of the undocumented methods although they may be exposed via any of the SDK classes.
