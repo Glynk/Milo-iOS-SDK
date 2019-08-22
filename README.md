@@ -135,5 +135,5 @@ class ViewController: UIViewController {
 
 If you believe you have identified a security vulnerability with MiloSdk, you should report it as soon as possible via email to sdk@getmilo.app.
 
-## Notes
+### Notes
 Please use only the methods and UI components documented in this Wiki, do not use any of the undocumented methods although they may be exposed via any of the SDK classes.
