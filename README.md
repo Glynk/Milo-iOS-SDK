@@ -79,6 +79,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 ```
 
 **clientSecret** - _Mandatory field_. Request the client secret from sdk@getmilo.app or use you the SDK dashboard to create client secrets.
+
 **phoneNumber** - _Either phone number or email is mandatory_. Pass a string field, can contain country code.
 
 **email** - _Either email or phone number is mandatory_. Pass a valid email address in string format.
